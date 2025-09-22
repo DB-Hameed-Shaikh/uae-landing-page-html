@@ -283,6 +283,20 @@ a{
     border-bottom-left-radius: 14px;
     border-bottom-right-radius: 14px;
 }
+
+.dropdown-menu-container::-webkit-scrollbar {
+    width: 6px; 
+}
+
+.dropdown-menu-container::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.dropdown-menu-container::-webkit-scrollbar-thumb {
+    background-color: var(--theme-aqua); 
+    border-radius: 10px;
+}
+
 .dropdown-menu-box{
     width:280px;
 }
