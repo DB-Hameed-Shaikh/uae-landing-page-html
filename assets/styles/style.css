@@ -1475,9 +1475,13 @@ a{
     height: auto;
     aspect-ratio: 8/10;
     background: white;
-    box-shadow: 0 0 24px #b1b1b1;
     border-radius: 1rem;
     overflow: hidden;
+    transition: all 0.3s ease-in-outn;
+}
+
+.doctor-slide-item:hover .doctor-slide-img{
+    box-shadow: 0 0 24px #b1b1b1;
 }
 
 .doctor-slide-img img {

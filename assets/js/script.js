@@ -263,13 +263,11 @@ $(document).ready(function () {
       );
     }
   );
-
   // Doctors Slider 
 
 
 
-  // Google Reviews slider 
-
+  // Google Reviews slider
   const GoogleSlider = $('#googleReviewsSlider').owlCarousel({
     autoWidth: true,
     dots: false,
@@ -290,10 +288,10 @@ $(document).ready(function () {
   );
 
 
-  // Blogs Slider 
-
+  // Blogs Slider
   const BlogsSlider = $('#blogSlider').owlCarousel({
     dots: false,
+    autoplay:true,
     responsive: {
       0: {
         autoWidth: true,
