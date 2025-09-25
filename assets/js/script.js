@@ -118,12 +118,12 @@ $(document).ready(function () {
   const $journeyCarousel = $('#journeyImgSlide');
   $journeyCarousel.owlCarousel({
     items: 1,
-    loop: true,
-    center: true,
-    arrows: false,
-    autoplayHoverPause: false,
-    dots: false,
-    autoplay: true,
+    loop: 1,
+    center: 1,
+    arrows: 0,
+    autoplayHoverPause: 0,
+    dots: !1,
+    autoplay: 1,
     autoplayTimeout: 8000,
   });
 
@@ -187,7 +187,7 @@ $(document).ready(function () {
     dots: false,
     autoplayTimeout: 2000,
     dots: false,
-    nav: false
+    nav: false,
   });
 
   const InsuranceBottom = $('#insuaranceBottomSlider').owlCarousel({
@@ -358,7 +358,16 @@ $(document).ready(function () {
 
 
 
+  const $journeyContainer = $('#journeyContainer');
+  const containerheight = $journeyContainer.outerHeight();
+  function setJorneyHeight(){
+    $journeyContainer.css({'height':containerheight,'overflow':"hidden"});
+  }
+  setJorneyHeight()
 
+  $(window).resize(function() {
+    setJorneyHeight();
+  });
 
 
 })
