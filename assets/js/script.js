@@ -114,66 +114,124 @@ $(document).ready(function () {
   //   autoplayTimeout:3000,
   // })
 
-  const JourneyPointItems = document.querySelectorAll('.journey-point-item');
-  const $journeyCarousel = $('#journeyImgSlide');
-  $journeyCarousel.owlCarousel({
-    items: 1,
-    loop: 1,
-    center: 1,
-    arrows: 0,
-    autoplayHoverPause: 0,
-    dots: !1,
-    autoplay: 1,
-    autoplayTimeout: 8000,
-  });
+  // const JourneyPointItems = document.querySelectorAll('.journey-point-item');
+  // const $journeyCarousel = $('#journeyImgSlide');
+  // $journeyCarousel.owlCarousel({
+  //   items: 1,
+  //   loop: 1,
+  //   center: 1,
+  //   arrows: 0,
+  //   autoplayHoverPause: 0,
+  //   dots: !1,
+  //   autoplay: 1,
+  //   autoplayTimeout: 8000,
+  // });
 
-  function updateJourneyImagLayer(currentIndex) {
-    const $slides = $journeyCarousel.find(".owl-item");
-    const totalSlides = $slides.length;
+  // function updateJourneyImagLayer(currentIndex) {
+  //   const $slides = $journeyCarousel.find(".owl-item");
+  //   const totalSlides = $slides.length;
 
-    $slides.removeClass('active-front active-second active-third active-fourth').css('opacity', 0);
+  //   $slides.removeClass('active-front active-second active-third active-fourth').css('opacity', 0);
 
-    const frontIndex = currentIndex;
-    const secondIndex = (currentIndex + 1) % totalSlides;
-    const thirdIndex = (currentIndex + 2) % totalSlides;
-    const fourthIndex = (currentIndex + 3) % totalSlides;
+  //   const frontIndex = currentIndex;
+  //   const secondIndex = (currentIndex + 1) % totalSlides;
+  //   const thirdIndex = (currentIndex + 2) % totalSlides;
+  //   const fourthIndex = (currentIndex + 3) % totalSlides;
 
-    $slides.each(function () {
-      let idx = $(this).index();
+  //   $slides.each(function () {
+  //     let idx = $(this).index();
 
-      if (idx === frontIndex) {
-        $(this).addClass("active-front").css("opacity", 1);
-      } else if (idx === secondIndex) {
-        $(this).addClass("active-second").css("opacity", 0.7);
-      } else if (idx === thirdIndex) {
-        $(this).addClass("active-third").css("opacity", 0.5);
-      } else if (idx === fourthIndex) {
-        $(this).addClass("active-fourth").css("opacity", 0.2);
-      }
-    });
-  }
-  JourneyPointItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      $journeyCarousel.trigger('to.owl.carousel', [index, 500]);
-      $journeyCarousel.trigger('stop.owl.autoplay');
-      $journeyCarousel.trigger('play.owl.autoplay', [8000]);
-    });
-  });
+  //     if (idx === frontIndex) {
+  //       $(this).addClass("active-front").css("opacity", 1);
+  //     } else if (idx === secondIndex) {
+  //       $(this).addClass("active-second").css("opacity", 0.7);
+  //     } else if (idx === thirdIndex) {
+  //       $(this).addClass("active-third").css("opacity", 0.5);
+  //     } else if (idx === fourthIndex) {
+  //       $(this).addClass("active-fourth").css("opacity", 0.2);
+  //     }
+  //   });
+  // }
+  // JourneyPointItems.forEach((item, index) => {
+  //   item.addEventListener('click', () => {
+  //     $journeyCarousel.trigger('to.owl.carousel', [index, 500]);
+  //     $journeyCarousel.trigger('stop.owl.autoplay');
+  //     $journeyCarousel.trigger('play.owl.autoplay', [8000]);
+  //   });
+  // });
  
-  $journeyCarousel.on('changed.owl.carousel', function (event) {
-  let index = event.item.index - event.relatedTarget._clones.length / 2;
-  let count = event.item.count;
-  const normalizedIndex = ((index % count) + count) % count;
+  // $journeyCarousel.on('changed.owl.carousel', function (event) {
+  // let index = event.item.index - event.relatedTarget._clones.length / 2;
+  // let count = event.item.count;
+  // const normalizedIndex = ((index % count) + count) % count;
 
-  updateJourneyImagLayer(normalizedIndex);
+  // updateJourneyImagLayer(normalizedIndex);
 
-    JourneyPointItems.forEach((item, i) => {
-        item.classList.toggle('active', i === normalizedIndex);
-    });
-    });
+  //   JourneyPointItems.forEach((item, i) => {
+  //       item.classList.toggle('active', i === normalizedIndex);
+  //   });
+  //   });
 
 
-  updateJourneyImagLayer(0);
+  // updateJourneyImagLayer(0);
+
+const JourneyPointItems = document.querySelectorAll('.journey-point-item');
+const $journeyCarousel = $('#journeyImgSlide');
+
+$journeyCarousel.slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  centerMode: true,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 8000,
+  infinite: true,
+  speed: 500,
+  pauseOnHover:false,
+  cssEase: 'linear',
+});
+
+function updateJourneyImageLayer(currentIndex) {
+  const $slides = $journeyCarousel.find('.slick-slide').not('.slick-cloned'); // ignore cloned slides
+
+  $slides.removeClass('active-front active-second active-third active-fourth');
+
+  const totalSlides = $slides.length;
+  const frontIndex = currentIndex % totalSlides;
+  const secondIndex = (frontIndex + 1) % totalSlides;
+  const thirdIndex = (frontIndex + 2) % totalSlides;
+  const fourthIndex = (frontIndex + 3) % totalSlides;
+
+  $slides.eq(frontIndex).addClass('active-front');
+  $slides.eq(secondIndex).addClass('active-second');
+  $slides.eq(thirdIndex).addClass('active-third');
+  $slides.eq(fourthIndex).addClass('active-fourth');
+}
+
+// Initial setup
+updateJourneyImageLayer(0);
+
+// Use beforeChange for smoother updates
+$journeyCarousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  updateJourneyImageLayer(nextSlide);
+
+  JourneyPointItems.forEach((item, i) => {
+    item.classList.toggle('active', i === nextSlide);
+  });
+});
+
+// Click on journey points
+JourneyPointItems.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    $journeyCarousel.slick('slickGoTo', index);
+  });
+});
+
+
+
+
+
+
 
 
 
