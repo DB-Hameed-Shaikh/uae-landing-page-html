@@ -584,12 +584,12 @@ a {
     max-width: 200px;
 }
 
-@media (max-width:1110px){
+@media (max-width:1040px){
     .hero-banner-title{
-        font-size: 48px;
+        font-size: 46px !important;
     }
     .hero-feature-points .item {
-        font-size: 22px;
+        font-size: 16px;
     }
 }
 
@@ -600,7 +600,7 @@ a {
     }
 
     .main-hero-banner .hero-banner-title {
-        font-size: 24px;
+        font-size: 24px !important;
     }
 
     .hero-feature-points .item {
@@ -816,7 +816,7 @@ a {
 
 @media (max-width:420px) {
     .form-features {
-        gap: 10px;
+        gap: 6px;
         font-size: 10px;
     }
 }
@@ -1504,7 +1504,7 @@ a {
 /* Clinics Section  */
 .clinic-slider-item {
     width: 100%;
-    max-width: 480px;
+    max-width: min(480px,90svw);
     padding: 1rem;
 }
 
@@ -1582,7 +1582,7 @@ a {
 /* Google Review Section  */
 .google-review-box {
     width: 100%;
-    max-width: 300px;
+    max-width: min(300px,80svw);
     height: 100%;
     padding: 20px 16px;
     background: white;

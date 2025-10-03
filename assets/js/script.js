@@ -120,8 +120,8 @@ $(document).ready(function () {
     arrows: false,
     dots: false,
     infinite: true,
-    draggable: true, // Enable dragging with mouse
-    swipeToSlide: true
+    draggable: false,
+    swipeToSlide: true,
   });
 
   $('#insuaranceBottomSlider').slick({
@@ -183,7 +183,7 @@ $(document).ready(function () {
     infinite:false,
     prevArrow: $('.GooglePrevNav'),
     nextArrow: $('.GoogleNextNav'),
-    dots: false
+    dots: false,
   });
 
   // ------------------------------
@@ -199,7 +199,20 @@ $(document).ready(function () {
     infinite:false,
     prevArrow: $('.BlogsPrevSlide'),
     nextArrow: $('.BlogsNextSlide'),
-    
+    responsive:[
+      {
+        breakpoint:1040,
+        settings:{
+          slidesToShow:3,
+        }
+      },
+      {
+        breakpoint:580,
+        settings:{
+          slidesToShow:1,
+        }
+      }
+    ]
   });
 
   // ------------------------------
