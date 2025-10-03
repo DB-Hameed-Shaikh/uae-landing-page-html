@@ -653,7 +653,7 @@ a {
     cursor: pointer;
 }
 
-.slider-control-btn.disabled {
+.slider-control-btn.disabled , .slider-control-btn.slick-disabled{
     filter: grayscale(1);
     opacity: 0.2;
 }
@@ -1063,9 +1063,6 @@ a {
 /* Aesthetic section  */
 
 /* Ailments Section  */
-#AilmentsSlider .owl-stage {
-    width: 120svw !important;
-}
 
 .ailment-slide-item {
     position: relative;
@@ -1073,6 +1070,7 @@ a {
     height: auto;
     overflow: hidden;
     max-width: 290px;
+    margin: 0 18px;
 }
 
 .ailment-slide-item .ailment-image {
@@ -1363,6 +1361,10 @@ a {
     font-weight: 800;
 }
 
+#InsuranceSlider .item{
+    margin: 0 15px;
+}
+
 #InsuranceSlider img {
     height: 70px;
     width: auto
@@ -1627,15 +1629,15 @@ a {
     max-width: 340px;
 }
 
-#blogSlider .owl-item:nth-child(even) .blog-slider-item {
+#blogSlider .slick-slide:nth-child(even) .blog-slider-item {
     background: #c2d1bc;
 }
 
-#blogSlider .owl-item:nth-child(3) .blog-slider-item {
+#blogSlider .slick-slide:nth-child(3) .blog-slider-item {
     background: #eabed9;
 }
 
-#blogSlider .owl-item:nth-child(4) .blog-slider-item {
+#blogSlider .slick-slide:nth-child(4) .blog-slider-item {
     background: #f0cdb9;
 }
 

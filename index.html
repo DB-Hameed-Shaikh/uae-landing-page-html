@@ -13,10 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="./assets/styles/boostrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/bootstrap.icon.css">
-    <link rel="stylesheet" href="./assets/styles/owl.carousel.min.css">
-    <link rel="stylesheet" href="./assets/styles/owl.theme.default.min.css">
     <link rel="stylesheet" href="./assets/styles/hamburgers.min.css" />
     <link rel="stylesheet" href="./assets/styles/slick.css" />
+    <link rel="stylesheet" href="./assets/styles/slick.theme.css" />
     <!-- <link rel="stylesheet" href="./assets/styles/aos.css"> -->
     <link rel="stylesheet" href="./assets/styles/style.css" />  
 </head>
@@ -488,7 +487,7 @@
                 <div class="col-md-6">
                     <div class="ms-auto">
                         <div class="d-none d-md-flex gap-2 justify-content-end">
-                            <div class="slider-control-btn disabled" id="BannerPrevDesktop"><i
+                            <div class="slider-control-btn" id="BannerPrevDesktop"><i
                                     class="bi bi-arrow-left"></i></div>
                             <div class="slider-control-btn " id="BannerNextDesktop"><i class="bi bi-arrow-right"></i>
                             </div>
@@ -498,7 +497,53 @@
             </div>
 
             <div class="my-4">
-                <div class="owl-carousel " id="RecoveriesSlider">
+                <div class=" " id="RecoveriesSlider">
+
+                    <div class="item p-1">
+                        <div class="row gy-4">
+                            <div class="col-md-6">
+                                <div class="slidercontainer">
+                                    <div class="before-after-badge">Before</div>
+                                    <div class="before-after-badge">After</div>
+                                    <div class="image-container">
+                                        <img class="image-before slider-image"
+                                            src="./images/results/1-Patient-After.webp"
+                                            alt="color photo" loading="lazy" />
+                                        <img class="image-after slider-image"
+                                            src="./images/results/1-Patient-Before.webp"
+                                            alt="black and white" loading="lazy" />
+                                    </div>
+                                    <!-- step="10" -->
+                                    <input type="range" min="0" max="100" value="50"
+                                        aria-label="Percentage of before photo shown" class="slider" />
+                                    <div class="slider-line" aria-hidden="true"></div>
+                                    <div class="slider-button" aria-hidden="true">
+                                        <i class="bi bi-arrows"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="compare-content-box">
+                                    <img src="./images/misc/before-after-quote.webp" alt="quote" class="before-after-quote"
+                                        loading="lazy">
+                                    <h3 class="compare-content-title">Hair Fall</h3>
+                                    <p class="compare-content-p">I was losing so much hair every day, it really worried
+                                        me.
+                                        I visited Dr Batra's® in Dubai, and the doctor gave me a treatment plan that was
+                                        made just for me. They didn't just treat my hair fall, but also looked at my
+                                        stress
+                                        and lifestyle. After 3 months, my hair fall reduced a lot and I feel so much
+                                        better
+                                    </p>
+                                    <h4 class="fs-4"><strong>Visible Result in 5 Sessions</strong></h4>
+                                    <div class="mt-4">
+                                        <h5 class="compare-content-name mb-1">Faiz Shaikh</h5>
+                                        <h6 class="compare-content-name-desc">DHCC Clinic</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="item p-1">
                         <div class="row gy-4">
@@ -550,7 +595,7 @@
             </div>
 
             <div class="d-flex d-md-none gap-2 justify-content-center">
-                <div class="slider-control-btn disabled" id="BannerPrevMobile"><i class="bi bi-arrow-left"></i>
+                <div class="slider-control-btn" id="BannerPrevMobile"><i class="bi bi-arrow-left"></i>
                 </div>
                 <div class="slider-control-btn " id="BannerNextMobile"><i class="bi bi-arrow-right"></i></div>
             </div>
@@ -602,7 +647,7 @@
 
         </div>
 
-        <div id="AilmentsSlider" class=" owl-carousel">
+        <div id="AilmentsSlider" class="  ">
 
             <div>
                 <div class="slider-gap"></div>
@@ -849,7 +894,7 @@
                 Cover <br class="d-block d-md-none" /> Major
                 Insurance</h4>
 
-                <div class="owl-carousel" id="InsuranceSlider">
+                <div class="" id="InsuranceSlider">
                     <div class="item">
                         <img loading="lazy" alt="logos" src="./images/logos/cigna-logo.webp">
                     </div>
@@ -879,7 +924,7 @@
         </div>
     </div>
     <div class="d-block d-md-none bg-subtle-beige-half container py-4">
-        <div class="owl-carousel" id="insuaranceBottomSlider">
+        <div class=" " id="insuaranceBottomSlider">
             <div>
                 <img class="w-100" src="./images/logos/bottom/emi.webp" loading="lazy" alt="EMI Option">
             </div>
@@ -972,7 +1017,7 @@
                     </div>
 
                     <div class="d-block d-md-none">
-                        <div id="mobileSliderAbout" class="owl-carousel">
+                        <div id="mobileSliderAbout" class=" ">
                             <div>
                                 <div class="flip-card-box">
                                     <div class="about-feature-box box-1">
@@ -1054,7 +1099,7 @@
             </div>
         </div>
 
-        <div class="owl-carousel" id="clinicSlider">
+        <div class=" " id="clinicSlider">
 
             <div>
                 <div class="clinic-slider-item">
@@ -1133,7 +1178,7 @@
                 </div>
             </div>
 
-            <div id="doctorsSlider" class=" owl-carousel">
+            <div id="doctorsSlider" class="">
 
                 <div>
                     <div class="p-3">
@@ -1198,6 +1243,38 @@
                         </div>
                     </div>
                 </div>
+
+                <div>
+                    <div class="p-3">
+                        <div class="doctor-slide-item">
+                            <div class="doctor-slide-img">
+                                <img src="./images/doctors/doctors-4.webp" loading="lazy" alt="Doctor">
+                            </div>
+                            <div class="text-center mt-4 doctor-slide-content">
+                                <h4 class="text-theme mb-0">Dr. Anupriya Batra</h4>
+                                <h5 class="fw-bold">Homeopathic Doctor</h5>
+                                <h6><strong>Experience:</strong> 19 Years</h6>
+                                <h6><strong>Qualification (BHMS/MD):</strong> BHMS</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div>
+                    <div class="p-3">
+                        <div class="doctor-slide-item">
+                            <div class="doctor-slide-img">
+                                <img src="./images/doctors/doctors-4.webp" loading="lazy" alt="Doctor">
+                            </div>
+                            <div class="text-center mt-4 doctor-slide-content">
+                                <h4 class="text-theme mb-0">Dr. Anupriya Batra</h4>
+                                <h5 class="fw-bold">Homeopathic Doctor</h5>
+                                <h6><strong>Experience:</strong> 19 Years</h6>
+                                <h6><strong>Qualification (BHMS/MD):</strong> BHMS</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                
             </div>
 
@@ -1229,7 +1306,7 @@
             </div>
         </div>
 
-        <div id="googleReviewsSlider" class="owl-carousel">
+        <div id="googleReviewsSlider" class=" ">
             <div class="clone">
                 <div class="slider-gap"></div>
             </div>
@@ -1345,7 +1422,7 @@
                 </div>
             </div>
 
-            <div id="blogSlider" class="owl-carousel">
+            <div id="blogSlider" class=" ">
                 <div>
                     <div class="blog-slider-item m-2">
                         <img src="./images/blogs/blogs-1.webp" loading="lazy" alt="Blogs 1">
@@ -1614,7 +1691,6 @@
     <!-- Body Ends  -->
     <script src="./assets/js/jquery.min.js" defer></script>
     <!-- <script src="./assets/js/aos.js"></script> -->
-    <script src="./assets/js/owl.carousel.min.js" defer></script>
     <script src="./assets/js/slick.min.js" defer></script>
     <script src="./assets/js/script.js" defer></script>
 </body>
