@@ -584,6 +584,15 @@ a {
     max-width: 200px;
 }
 
+@media (max-width:1110px){
+    .hero-banner-title{
+        font-size: 48px;
+    }
+    .hero-feature-points .item {
+        font-size: 22px;
+    }
+}
+
 @media (max-width:768px) {
     .main-hero-banner-width {
         width: 100%;
@@ -1055,7 +1064,7 @@ a {
 
 /* Ailments Section  */
 #AilmentsSlider .owl-stage {
-    width: 120% !important;
+    width: 120svw !important;
 }
 
 .ailment-slide-item {
