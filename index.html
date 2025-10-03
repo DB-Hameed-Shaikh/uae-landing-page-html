@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dr Batras | UAE</title>
-    <meta title="description" content="DrBatra's Best Homeopathy Healthcare in UAE"/>
-    <meta name="keywords" content="Homeopathy UAE, Homeopathy Dubai, Homeopathy Abu Dhabi, Hair Loss Treatment, Skin Treatment, Dr Batra's Clinic, Best Homeopathy Doctor UAE">
+    <meta name="description" content="Visit Dr Batra's Homeopathy Clinics in Dubai & Abu Dhabi for hair loss, skin care & holistic healthcare in UAE. Book your consultation today." />
     <link rel="preload" href="./images/brand/DB-logo.webp" as="image">
     <link rel="preload" href="./images/banner/banner-google-rating.webp" as="image">
     <link rel="preload" href="./images/banner/home-banner-desktop.webp" as="image">
@@ -401,7 +400,9 @@
                 data-aos-delay="1200">
                 <div class="position-relative">
                     <div>
-                        <img class="w-100 h-auto hero-slider-img" src="./images/banner/home-banner-desktop.webp"
+                        <img class="w-100 h-auto hero-slider-img" fetchpriority="high" src="./images/banner/home-banner-desktop.webp"
+                            srcset="./images/banner/home-banner-mobile.webp 480w,
+                                    ./images/banner/home-banner-desktop.webp 1024w"   sizes="100vw"
                             width="1309" height="594" alt="Home banner">
                     </div>
                     <div class="d-none d-md-block">
@@ -1611,11 +1612,11 @@
     </footer>
     <!-- Footer  -->
     <!-- Body Ends  -->
-    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.min.js" defer></script>
     <!-- <script src="./assets/js/aos.js"></script> -->
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/slick.min.js" ></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/owl.carousel.min.js" defer></script>
+    <script src="./assets/js/slick.min.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
 </body>
 
 </html>
