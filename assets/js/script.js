@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
-  AOS.init({
-    easing: 'ease-out',
-    once: true,
-  });
+  // AOS.init({
+  //   easing: 'ease-out',
+  //   once: true,
+  // });
 
   // Navbar Logic 
   $('.nav-dropwdown-item').click(function () {
