@@ -30,6 +30,24 @@ $(document).ready(function () {
     }
   });
 
+
+
+
+  // Banner Slider 
+  $('#bannerSlider').slick({
+    slidesToShow:1,
+    slidesToScroll:1,
+    arrows:true,
+    prevArrow: $('.bannerSliderPrev'),
+    nextArrow: $('.bannerSliderNext'),
+    dots:false,
+    infinite:false,
+    fade:true,
+    autoplay:true,
+    autoplaySpeed:3000,
+  })
+
+
   // ------------------------------
   // Recoveries Slider
   // ------------------------------
